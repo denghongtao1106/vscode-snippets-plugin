@@ -1,0 +1,220 @@
+{
+  "print console": {
+    "prefix": "clog",
+    "body": ["console.log(${0});"],
+    "description": "print console"
+  },
+  //创建箭头函数
+  "create arrow function": {
+    "prefix": "afn",
+    "body": ["const ${1:functionName} = () => {", " ${0}", "}"],
+    "description": "create arrow function"
+  },
+  //创建空箭头函数
+  "create empty arrow function": {
+    "prefix": "fn",
+    "body": ["() => {${0}}"],
+    "description": "create empty arrow function"
+  },
+  // 创建带className的style
+  "create styles className": {
+    "prefix": "sclass",
+    "body": ["className={styles['${1:class-name}']}"],
+    "description": "create styles className"
+  },
+  //创建带className的div
+  "create div with className": {
+    "prefix": "divclass",
+    "body": ["<div className={styles['${1:class-name}']}></div>"],
+    "description": "create div with className"
+  },
+  //div上添加onClick事件
+  "create onClick event on div": {
+    "prefix": "onclick",
+    "body": ["onClick={${1:eventName}}"],
+    "description": "create div with className"
+  },
+  //创建ant typography
+  "create antd typography": {
+    "prefix": "typography",
+    "body": ["<Typography.Link>${1:内容}</Typography.Link>"],
+    "description": "create antd typography"
+  },
+  //创建ant button
+  "create antd button": {
+    "prefix": "antbutton",
+    "body": ["<Button type='primary'>${1:按钮}</Button>"],
+    "description": "create antd button"
+  },
+  //创建ant button
+  "create antd divider": {
+    "prefix": "antdivider",
+    "body": ["<Divider />"],
+    "description": "create antd divider"
+  },
+  //创建ant space
+  "create antd space": {
+    "prefix": "antspace",
+    "body": ["<Space>${0}</Space>"],
+    "description": "create antd space"
+  },
+  //创建ant RowCol
+  "create antd rowcol": {
+    "prefix": "antrowcol",
+    "body": ["<Row>", "  <Col span={12}>列1</Col>", "  <Col span={12}>列2</Col>", "</Row>"],
+    "description": "create antd divider"
+  },
+  //创建row space-between
+  "create row space-between": {
+    "prefix": "spacebetween",
+    "body": ["<Row justify='space-between'>${0}</Row>"],
+    "description": "create row space-between"
+  },
+  //创建ant select
+  "create antd select": {
+    "prefix": "antselect",
+    "body": ["<Select style={{ width: 120 }} value={1} options={[{ label: '选项1', value: 1 }]} />"],
+    "description": "create antd select"
+  },
+  //创建ant empty
+  "create antd empty": {
+    "prefix": "antempty",
+    "body": [
+      "<div className='xpht-flex-center xpht-cover'>",
+      "  <Empty image={Empty.PRESENTED_IMAGE_SIMPLE} />",
+      "</div>"
+    ],
+    "description": "create antd empty"
+  },
+  //创建ant input
+  "create antd input": {
+    "prefix": "antinput",
+    "body": ["<Input placeholder='${1:placeholder}' value={'${2:value}'} />"],
+    "description": "create antd input"
+  },
+  //创建download and preview
+  "create download and preview": {
+    "prefix": "donwloadandpreview",
+    "body": [
+      "<DownloadAndPreview path={'${1:fileUrl}'}>",
+      "  <p style={{ width: '100%', textAlign: 'left' }}>",
+      "    <Typography.Link>${2:filename}</Typography.Link>",
+      "  </p>",
+      "</DownloadAndPreview>"
+    ],
+    "description": "create download and preview"
+  },
+  //创建ant Descriptions
+  "create antd descriptions ": {
+    "prefix": "antdescriptions",
+    "body": [
+      "<Descriptions column={3} title='User Info'>",
+      "  <Descriptions.Item label='UserName'>Zhou Maomao</Descriptions.Item>",
+      "  <Descriptions.Item label='Telephone'>1810000000</Descriptions.Item>",
+      "  <Descriptions.Item label='Live'>Hangzhou, Zhejiang</Descriptions.Item>",
+      "  <Descriptions.Item label='Remark'>empty</Descriptions.Item>",
+      "  <Descriptions.Item label='Address'>",
+      "    No. 18, Wantang Road, Xihu District, Hangzhou, Zhejiang, China",
+      "  </Descriptions.Item>",
+      "</Descriptions>"
+    ],
+    "description": "create antd descriptions "
+  },
+  //创建useRef
+  "create useRef": {
+    "prefix": "useref",
+    "body": ["const ${1:someRef} = useRef<${any}>(null);"],
+    "description": "create useRef"
+  },
+  //创建useState
+  "create useState": {
+    "prefix": "usestate",
+    "body": ["const [${1:some}, ${2:setSome}] = useState('${0}');"],
+    "description": "create useRef"
+  },
+  //创建useEffect
+  "create useEffect": {
+    "prefix": "useeffect",
+    "body": ["useEffect(() => {", "  ${0}", "}, []);"],
+    "description": "create useEffect"
+  },
+  //创建useForm
+  "create useForm": {
+    "prefix": "useform",
+    "body": ["const [${1:antFormRef}] = Form.useForm();"],
+    "description": "create useForm"
+  },
+  //创建antd的图标引入
+  "create antd icon import": {
+    "prefix": "anticon",
+    "body": ["import { ${1:PaperClipOutlined} } from '@ant-design/icons';"],
+    "description": "create antd icon import"
+  },
+  //创建js引入的弹窗
+  "create js modal": {
+    "prefix": "jsmodal",
+    "body": [
+      "HT.showModal({",
+      "  title: '${1:标题}',",
+      "  content: <div className={styles['${2:class-name}']}>弹窗内容</div>,",
+      "  onConfirm: () => {",
+      "    return true;",
+      "  }",
+      "});"
+    ],
+    "description": "create js modal"
+  },
+  //创建proForm
+  "create ant Form": {
+    "prefix": "antform",
+    "body": [
+      "<Form",
+      "  form={antFormRef}",
+      "  name='basic'",
+      "  labelCol={{ flex: '100px' }}",
+      "  wrapperCol={{ flex: 1 }}",
+      "  initialValues={{ username: '', password: '' }}",
+      "  autoComplete='off'",
+      ">",
+      "  <Form.Item label='名称' name='username' rules={[{ required: true, message: '请输入名称' }]}>",
+      "    <Input />",
+      "  </Form.Item>",
+      "  <Form.Item label='密码' name='password' rules={[{ required: true, message: '请输入密码' }]}>",
+      "    <Input.Password />",
+      "  </Form.Item>",
+      "</Form>"
+    ],
+    "description": "create ant Form"
+  },
+  //创建antlist
+  "create ant list": {
+    "prefix": "antlist",
+    "body": [
+      "<List",
+      "  size='small'",
+      "  header={<div>Header</div>}",
+      "  footer={<div>Footer</div>}",
+      "  bordered={true}",
+      "  split={true}",
+      "  dataSource={['item1', 'item2']}",
+      "  renderItem={item => <List.Item extra={<span>a</span>}>{item}</List.Item>}",
+      "/>"
+    ],
+    "description": "create ant list"
+  },
+  //创建ant tab card
+  "create ant tabcard": {
+    "prefix": "anttabcard",
+    "body": [
+      "<Tabs defaultActiveKey='1' type='card'>",
+      "  <Tabs.TabPane tab='Tab 1' key='1'>",
+      "    Content of Tab Pane 1",
+      "  </Tabs.TabPane>",
+      "  <Tabs.TabPane tab='Tab 2' key='2'>",
+      "    Content of Tab Pane 2",
+      "  </Tabs.TabPane>",
+      "</Tabs>"
+    ],
+    "description": "create ant list"
+  }
+}

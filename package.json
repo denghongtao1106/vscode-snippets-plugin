@@ -1,0 +1,23 @@
+{
+  "name": "xpht-snippets",
+  "displayName": "xpht-snippets",
+  "description": "汇天的代码片段",
+  "version": "0.0.1",
+  "publisher": "denght",
+  "license": "MIT",
+  "icon": "logo.jpg",
+  "engines": {
+    "vscode": "^1.72.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "typescriptreact",
+        "path": "./snippets/snippets.code-snippets"
+      }
+    ]
+  }
+}
